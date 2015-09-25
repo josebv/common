@@ -23,6 +23,7 @@
       - zsh
       - curl
       - screen
+      - wget
 
   - name: Snmp configuration
     template:
