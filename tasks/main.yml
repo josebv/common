@@ -5,7 +5,9 @@
     yum:  name=epel-release state=installed
     
   - name: Upgrade all packages
-    yum: name=* state=latest update_cache=yes
+    yum: name=* state=latest
+#    yum: name=* state=latest update_cache=yes
+#                    -- current version of ansible break when update_cache is used
 
   - name: Install base packages
     yum: name={{ item }} state=present
