@@ -25,6 +25,7 @@
       - screen
       - wget
       - net-tools
+      - telnet
 
   - name: Snmp configuration
     template:
