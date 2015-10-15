@@ -6,8 +6,6 @@
     
   - name: Upgrade all packages
     yum: name=* state=latest
-#    yum: name=* state=latest update_cache=yes
-#                    -- current version of ansible break when update_cache is used
 
   - name: Install base packages
     yum: name={{ item }} state=present
@@ -30,6 +28,8 @@
       - mailx
 
   - name: Snmp configuration
+    notify:
+      - reload snmp
     template:
       src=snmpd.conf.j2
       dest=/etc/snmp/snmpd.conf
@@ -37,6 +37,6 @@
       group=root
       mode=0600
 
-  - name: Reload snmp
+  - name: reload snmp
     service: name=snmpd state=reloaded
 

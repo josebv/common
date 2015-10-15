@@ -1,0 +1,5 @@
+---
+  - name: reload snmp
+    service: name=snmpd state=reloaded
+
+
