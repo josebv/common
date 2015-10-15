@@ -37,6 +37,3 @@
       group=root
       mode=0600
 
-  - name: reload snmp
-    service: name=snmpd state=reloaded
-
