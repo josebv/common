@@ -27,6 +27,7 @@
       - net-tools
       - telnet
       - unzip
+      - mailx
 
   - name: Snmp configuration
     template:
