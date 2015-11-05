@@ -27,6 +27,9 @@
       - unzip
       - mailx
 
+  - name: timezone
+    shell: cp /usr/share/zoneinfo/America/New_York /etc/localtime
+
   - name: Snmp configuration
     notify:
       - reload snmp
