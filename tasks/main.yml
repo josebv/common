@@ -26,6 +26,7 @@
       - telnet
       - unzip
       - mailx
+      - tmux
 
   - name: timezone
     shell: cp /usr/share/zoneinfo/America/New_York /etc/localtime
